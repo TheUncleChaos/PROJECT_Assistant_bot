@@ -842,7 +842,6 @@ def to_lower(bot, text="", *args):
         msg = message.lower()
         args = []
 
-        # Калькулятор
         if func_name == "calculate":
             expr = re.search(r'[\d\s\+\-\*\/\.\(\)]+', message)
             if expr:
@@ -1357,4 +1356,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
