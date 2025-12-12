@@ -25,7 +25,7 @@ except ImportError:
     print("⚠ Установи requests и beautifulsoup4 для поиска в интернете")
 
 try:
-    from duckduckgo_search import DDGS
+    from ddgs import DDGS
     DDGS_AVAILABLE = True
 except ImportError:
     DDGS_AVAILABLE = False
@@ -842,6 +842,7 @@ def to_lower(bot, text="", *args):
         msg = message.lower()
         args = []
 
+        # Калькулятор
         if func_name == "calculate":
             expr = re.search(r'[\d\s\+\-\*\/\.\(\)]+', message)
             if expr:
@@ -1356,6 +1357,4 @@ def main():
 
 
 if __name__ == "__main__":
-
     main()
-
